@@ -2,10 +2,10 @@ package net.mestwin.playground.captcha.domain
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
-class CaptchaRequest(val captchaAnswer: String)
+class CaptchaRequest(val captchaResponse: String)
 
 class CaptchaResponse(
-    val success: Boolean? = null,
+    val success: Boolean,
     val score: Float? = null,
     val action: String? = null,
     private val hostname: String? = null,
