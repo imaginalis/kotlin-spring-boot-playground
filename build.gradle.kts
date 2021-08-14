@@ -20,7 +20,10 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.springframework.boot:spring-boot-starter-json:2.5.3")
+	implementation("org.junit.jupiter:junit-jupiter:5.7.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
+	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.3.1")
 }
 
 tasks.withType<KotlinCompile> {
@@ -31,5 +34,9 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.withType<Test> {
+	useJUnitPlatform()
+}
+
+tasks.test {
 	useJUnitPlatform()
 }

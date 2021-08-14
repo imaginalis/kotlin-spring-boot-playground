@@ -5,7 +5,7 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.boot.web.client.RestTemplateBuilder
 
-internal class CaptchaServiceTest {
+class CaptchaServiceTest {
 
     @Test
     fun `should test captcha validation`() {
